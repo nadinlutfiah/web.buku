@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+       
+    body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #B48E5E;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.1s ease-in-out;
+    padding-bottom: 5px;
+}
+
+nav ul li a:hover{
+    border-bottom: 3px solid #B48E5E;
+}
+
+.auth-buttons button {
+    margin-left: 10px;
+    padding: 10px 30px;
+    border: none;
+    background-color: transparent;
+    color: #B48E5E;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    outline: 1px solid #B48E5E;
+    
+    
+}
+
+.auth-buttons .signup {
+    background-color: #c89966;
+    color: #fff;
+}
+
+/* templTE */
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+}
+
+.content {
+    max-width: 50%;
+}
+
+
+.connecting h1{
+    font-size: 4em;
+    color: #ffab45;
+    height: 35px;
+}
+.world h1{
+    font-size: 4em;
+    color: #B48E5E;
+    height: 35px;
+}
+.book h1{
+    font-size: 4em;
+    color: #ffab45;
+    height: auto;
+}
+.content p {
+    font-size: 1.2em;
+    line-height: 1,5em;
+    margin: 20px 0;
+    color: #74512D;
+}
+
+.content .get-started {
+    padding: 15px 30px;
+    background-color: #c89966;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+#jelek {
+    margin-bottom: 1px;
+}
+    </style>
+    
+</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBooks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="asset/logo.svg" alt="NexaBooks Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="best.html">Best Book</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="login.html">
+                <button class="login">Log In</button>
+            </a>
+            <a href="sign.html">
+                <button class="signup">Sign Up</button>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <div class="connecting">
+                <h1>Connecting</h1>
+            </div>
+            <div class="world">
+                <h1>You to the World of</h1>
+            </div>
+            <div class="book">
+                <h1> Books.</h1>
+            </div>
+            <p id="jelek">Welcome to <strong style="color: #74512D;">NexaBook!</strong> </p>
+            <p style="margin-top: 3px;">The digital library platform designed to make it easy for you to find, read, and enjoy books from a wide range of genres and renowned authors.</p>
+            <a href="sign.html">
+                <button class="get-started">Lets get started</button>
+            </a>
+        </div>
+        <div class="image">
+            <img src="asset/book.svg" alt="Books">
+        </div>
+    </main>
+</body>
+</html>
+
+</html>

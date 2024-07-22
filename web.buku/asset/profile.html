@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <nav>
+        <span class="material-symbols-outlined menu" id="toggleButton">
+            menu
+            </span>
+        <aside style="position: absolute;" id="menu">
+            <span class="material-symbols-outlined menu" id="toggleButton">
+                menu
+                </span>
+            <menu class="tabBar">
+                <div class="profile">
+                    <span class="material-symbols-outlined icon">
+                    account_circle
+                    </span>
+                    Profile
+            </div>
+            
+            <div class="beranda">
+                <a href="home.html">
+                <span class="material-symbols-outlined icon">
+                    home
+                    </span>
+                Beranda
+            </a>
+            </div>
+            <div class="kategori">
+                <span class="material-symbols-outlined icon">
+                    widgets
+                    </span>
+                Kategori
+            </div>
+            <div class="koleksi">
+                <span class="material-symbols-outlined icon">
+                    book
+                    </span>
+                Koleksi
+            </div>
+            <div class="profile">
+                <span class="material-symbols-outlined icon">
+                    shopping_cart
+                    </span>
+                Peminjaman
+            </div>
+        </menu>
+        </aside>
+    </nav>
+
+    <main>
+        <div class="profile">
+            <img src="asset/profile.svg" alt="">
+            <span class="material-symbols-outlined edit">
+                edit
+                </span>
+        </div>
+        <div class="username">
+            <label for="username">Username</label>
+            <input type="text" name="username">
+            <span class="material-symbols-outlined icon">
+                person
+                </span>
+        </div>
+        <div class="Email">
+            <label for="Email">Email</label>
+            <input type="text" name="Email">
+            <span class="material-symbols-outlined icon">
+                mail
+                </span>
+        </div>
+        <div class="Password">
+            <label for="Password">Password</label>
+            <input type="password" name="Password" id="password">
+            <span class="material-symbols-outlined icon">
+                lock
+                </span>
+            <div class="passwordIcon">
+                    <span class="material-symbols-outlined" id="on" onclick="toggleVisibility()" >
+                        visibility
+                        </span>
+                    <span class="material-symbols-outlined" id="off" onclick="toggleVisibility()">
+                        visibility_off
+                        </span>
+            </div>
+        </div>
+    </main>
+</body>
+<script>
+    const menu = document.getElementById('menu');
+    const toggleButtons = document.querySelectorAll('#toggleButton');
+    const icons = document.querySelectorAll('.icon');
+    let isMenuOpen = false;
+
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                if (isMenuOpen) {
+                    menu.style.transform = 'translateX(-100%)';
+                } else {
+                    menu.style.transform = 'translateX(0)';
+                }
+                isMenuOpen = !isMenuOpen;
+            });
+        });
+
+        const inputs = document.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.nextElementSibling.classList.add('hide-icon'); // Sembunyikan ikon setelah input yang sedang difokuskan
+            });
+            input.addEventListener('blur', () => {
+                if (input.value.trim() === '') {
+                    input.nextElementSibling.classList.remove('hide-icon'); // Tampilkan ikon jika input kosong
+                } else {
+                    input.nextElementSibling.classList.add('hide-icon'); // Sembunyikan ikon jika input tidak kosong
+                }
+            });
+        });
+
+        function toggleVisibility() {
+        const onElement = document.getElementById('on');
+        const offElement = document.getElementById('off');
+        const inputElement = document.getElementById('password');
+
+        if (onElement.style.display === 'none') {
+            onElement.style.display = 'inline';
+            offElement.style.display = 'none';
+            inputElement.type = 'password';
+            } else {
+                onElement.style.display = 'none';
+                offElement.style.display = 'inline';
+                inputElement.type = 'text';
+        }
+    }
+</script>
+</html>
